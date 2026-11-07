@@ -1,0 +1,6 @@
+raw read() got 27 bytes: patient=1042;hr=72;spo2=98
+fread() got 27 bytes
+pid=4655
+ordinary function call :     1.4 ns
+system call (getppid)  :   150.2 ns
+ratio                  :   106.7 x

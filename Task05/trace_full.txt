@@ -1,0 +1,50 @@
+execve("./task05_demo", ["./task05_demo"], 0x7ffec44ee710 /* 27 vars */) = 0
+brk(NULL)                               = 0x5a5d750f6000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73637acd4000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20763, ...}) = 0
+mmap(NULL, 20763, PROT_READ, MAP_PRIVATE, 3, 0) = 0x73637acce000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \250\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0755, st_size=2190608, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2231696, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x73637aa00000
+mmap(0x73637aa28000, 1671168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x73637aa28000
+mmap(0x73637abc0000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x73637abc0000
+mmap(0x73637ac0e000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20e000) = 0x73637ac0e000
+mmap(0x73637ac14000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x73637ac14000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73637accb000
+arch_prctl(ARCH_SET_FS, 0x73637accb740) = 0
+set_tid_address(0x73637accbd68)         = 4666
+set_robust_list(0x73637accba20, 24)     = 0
+rseq(0x73637accb6a0, 0x20, 0, 0x53053053) = 0
+mprotect(0x73637ac0e000, 16384, PROT_READ) = 0
+mprotect(0x5a5d4796b000, 4096, PROT_READ) = 0
+mprotect(0x73637ad19000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\xba\xde\x4c\x55\xaa\x75\x33\xe2", 8, GRND_NONBLOCK) = 8
+munmap(0x73637acce000, 20763)           = 0
+openat(AT_FDCWD, "record.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 3
+write(3, "patient=1042;hr=72;spo2=98\n", 27) = 27
+close(3)                                = 0
+openat(AT_FDCWD, "record.txt", O_RDONLY) = 3
+read(3, "patient=1042;hr=72;spo2=98\n", 63) = 27
+close(3)                                = 0
+fstat(1, {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x3), ...}) = 0
+ioctl(1, TCGETS2, 0x7ffe69b1df40)       = -1 ENOTTY (Inappropriate ioctl for device)
+brk(NULL)                               = 0x5a5d750f6000
+brk(0x5a5d75118000)                     = 0x5a5d75118000
+openat(AT_FDCWD, "record.txt", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27, ...}) = 0
+read(3, "patient=1042;hr=72;spo2=98\n", 4096) = 27
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+getpid()                                = 4666
+unlink("record.txt")                    = 0
+write(1, "raw read() got 27 bytes: patient"..., 82) = 82
+exit_group(0)                           = ?
++++ exited with 0 +++
