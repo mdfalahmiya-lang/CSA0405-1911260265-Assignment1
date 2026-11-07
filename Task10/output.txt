@@ -1,0 +1,20 @@
+== Copy of 4194304 bytes with read()/write() ==
+buffer     read() calls  wall(s)  user(s)   sys(s)
+1          4194305         3.145    0.592    2.521
+16         262145          0.189    0.035    0.154
+64         65537           0.097    0.012    0.047
+512        8193            0.016    0.000    0.010
+4096       1025            0.009    0.000    0.004
+32768      129             0.006    0.000    0.003
+65536      65              0.005    0.000    0.003
+1048576    5               0.007    0.000    0.006
+
+== Other methods (same file) ==
+fread/fwrite 1 byte at a time : wall 0.125 user 0.118 sys 0.004
+mmap + memcpy                 : wall 0.060 user 0.003 sys 0.006
+
+== Creating 1000 execution units ==
+fork()+wait x1000        : wall 0.223 user 0.004 sys 0.124
+pthread_create+join x1000: wall 0.081 user 0.000 sys 0.042
+posix_spawn /bin/true x1000: wall 0.603 user 0.004 sys 0.083
+fork()+exec /bin/true x1000: wall 0.679 user 0.007 sys 0.149
