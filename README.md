@@ -8,7 +8,7 @@ Operating Systems (CSA0405) - Assignment 1 (CO1): Evaluate and Justify the Opera
 | Register number | 1911260265 |
 | Course | CSA0405 Operating Systems |
 | Submission date | 05/11/2026 |
-| GitHub repository | https://github.com/mdfalahmiya-lang/OS/tree/main |
+| GitHub repository | https://github.com/mdfalahmiya-lang/CSA0405-1911260265-Assignment1 |
 | Compiler and version | see `env.txt` (written by `run_all.sh`; e.g. gcc 13.3.0) |
 | Linux distribution and version | see `env.txt` (e.g. Ubuntu 24.04.5 LTS) |
 | Compile command | `gcc -std=c11 -Wall -Wextra -pthread <file>.c -o <name>` (Task10 uses `-std=gnu11`) |
