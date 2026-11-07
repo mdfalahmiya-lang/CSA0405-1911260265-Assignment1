@@ -1,0 +1,8 @@
+bin/
+*.o
+task05_demo
+syscall_cost
+task06
+task07
+task07_dup
+task10
